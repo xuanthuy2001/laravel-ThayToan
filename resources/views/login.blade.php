@@ -3,6 +3,10 @@
 
 <head>
       @include('head')
+      @include('head.login')
+
+
+
 </head>
 
 <body>
@@ -10,41 +14,79 @@
       @include('heade')
       <!-- navbar ends -->
       <!-- main content start  -->
-      <div class="container mt-5">
-            <div class="row main-section">
-                  <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="card rounded-0 shadow-sm">
-                              <div class="card-header">
-                                    <span class="text-success"> Đăng nhập</span>
-                              </div>
+      <div class="container-xxl">
+            <div class="authentication-wrapper authentication-basic container-p-y">
+                  <div class="authentication-inner">
+                        <!-- Register -->
+                        <div class="card">
                               <div class="card-body">
-                                    <form>
-                                          <div class="row mb-3">
-                                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                                                <div class="col-sm-10">
-                                                      <input type="email" class="form-control" id="inputEmail3">
-                                                </div>
-                                          </div>
-                                          <div class="row mb-3">
-                                                <label for="inputPassword3" class="col-sm-2 col-form-label">Mật
-                                                      khẩu</label>
-                                                <div class="col-sm-10">
-                                                      <input type="password" class="form-control" id="inputPassword3">
-                                                </div>
-                                          </div>
+                                    <div class="app-brand justify-content-center">
+                                          <h1>Đăng nhập</h1>
+                                    </div>
+                                    <h4 class="mb-2">Welcome to Sneat! 👋</h4>
+                                    <p class="mb-4">Vui lòng đăng nhập vào tài khoản của bạn và bắt đầu </p>
 
-                                          <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                    <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+                                          <div class="mb-3">
+                                                <label for="email" class="form-label">Email or Username</label>
+                                                <input type="text" class="form-control" id="email" name="email-username"
+                                                      placeholder="Enter your email or username" autofocus />
+                                          </div>
+                                          <div class="mb-3 form-password-toggle">
+                                                <div class="d-flex justify-content-between">
+                                                      <label class="form-label" for="password">Password</label>
+                                                      <a href="auth-forgot-password-basic.html">
+                                                            <small>Forgot Password?</small>
+                                                      </a>
+                                                </div>
+                                                <div class="input-group input-group-merge">
+                                                      <input type="password" id="password" class="form-control"
+                                                            name="password"
+                                                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                                            aria-describedby="password" />
+                                                      <span class="input-group-text cursor-pointer"><i
+                                                                  class="bx bx-hide"></i></span>
+                                                </div>
+                                          </div>
+                                          <div class="mb-3">
+                                                <div class="form-check">
+                                                      <input class="form-check-input" type="checkbox"
+                                                            id="remember-me" />
+                                                      <label class="form-check-label" for="remember-me"> Remember Me
+                                                      </label>
+                                                </div>
+                                          </div>
+                                          <div class="mb-3">
+                                                <button class="btn btn-primary d-grid w-100" type="submit">Sign
+                                                      in</button>
+                                          </div>
                                     </form>
+
+                                    <p class="text-center">
+                                          <span>New on our platform?</span>
+                                          <a href="auth-register-basic.html">
+                                                <span>Create an account</span>
+                                          </a>
+                                    </p>
                               </div>
                         </div>
+                        <!-- /Register -->
                   </div>
             </div>
       </div>
+
+      <!-- / Content -->
+
+
       <!-- main content ends -->
       <div class="footer-section mt-5">
             <p class="text-center m-0 text-white">2022 © Copyright by HPC</p>
       </div>
       @include('JS')
+      @include('JS.login')
+
+
+
 </body>
 
 </html>

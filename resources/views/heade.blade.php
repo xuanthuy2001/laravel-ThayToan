@@ -7,16 +7,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                        <a class="nav-link" href="/blog">Trang chủ <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{ route('blog') }}">Trang chủ <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                        <a class="nav-link" href="/blog-post">Giới thiệu về trường học</a>
+                        <a class="nav-link" href="{{ route('blog-post') }}">Giới thiệu về trường học</a>
                   </li>
                   <li class="nav-item">
-                        <a class="nav-link" href="/login">Đăng nhập</a>
+                        <a class="nav-link" href="{{ route('login') }}">Đăng nhập</a>
                   </li>
                   <li class="nav-item">
-                        <a class="nav-link" href="/register">Đăng ký</a>
+                        <a class="nav-link" href="{{ route('register') }}">Đăng ký</a>
                   </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">

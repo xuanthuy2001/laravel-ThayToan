@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class School extends Controller
 {
+    public function home()
+    {
+        return view('home', ['title' => 'home']);
+    }
     public function blog()
     {
         return view('blog', ['title' => 'blog']);
